@@ -6,10 +6,6 @@ const GridMovie = ({movies}) => {
     // grid-cols-1 (móvil), sm:grid-cols-2 (tablet), lg:grid-cols-4 (desktop)
     <div >
       <CardMovie></CardMovie>
-      <CardMovie></CardMovie>
-      <CardMovie></CardMovie>
-      <CardMovie></CardMovie>
-      <CardMovie></CardMovie>
     
     </div>
   );
