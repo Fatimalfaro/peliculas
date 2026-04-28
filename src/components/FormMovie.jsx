@@ -82,7 +82,7 @@ const FormMovie = () => {
         {/* Botón */}
         <button type="submit"  className="bg-blue-600 text-white px-6 py-2 rounded font-medium hover:bg-blue-700 transition-colors w-full sm:w-auto cursor-pointer">Enviar Película</button>
       </form>
-      <GridMovie></GridMovie>
+      <GridMovie movies={peliculas}></GridMovie>
     </section>
   );
 };

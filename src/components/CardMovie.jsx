@@ -1,18 +1,18 @@
 import React from "react";
 
-const CardMovie = () => {
+const CardMovie = ({movie}) => {
   return (
     <div className="flex flex-col h-full border border-slate-300 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-800 transition-colors shadow-sm">
       {/* Contenido superior */}
       <div className="grow">
         <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white uppercase">
-          pelicula
+          {movie.nombrePelicula}
         </h3>
         <p className="text-slate-600 dark:text-slate-400 mb-4 text-md leading-relaxed wrap-break-word">
-          descripcion
+          {movie.descripcion}
         </p>
         <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-4">
-          Categoría: 
+          Categoría: {movie.categoria}
         </p>
       </div>
       {/* Botón Eliminar siempre al final */}
