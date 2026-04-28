@@ -36,21 +36,38 @@ const FormMovie = () => {
         {/* Campo: Descripción */}
         <div>
           <label>Descripción</label>
-          <textarea rows="3" placeholder="Resumen de la trama..." className="w-full border border-slate-300 dark:border-slate-600 rounded p-2 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500/80"/>
-          <p className="text-sm text-red-600 mt-2">ocurrio un error</p>
+          <textarea rows="3" placeholder="Resumen de la trama..." className="w-full border border-slate-300 dark:border-slate-600 rounded p-2 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500/80" {...register('descripcion',{
+            required:'La descripcion es un dato obligatorio',
+            minLength:{
+              value: 2,
+              message: 'La descripcion debe tener como minimo 2 caracteres'
+            },
+            maxLength:{
+              value: 50,
+              message: 'La descripcion debe tener como maximo 300 caracteres'
+            },
+            pattern:{
+              value: /^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/,
+              message: 'La descripcion solo puede contener caracteres de la A a la Z y numeros'
+
+            }
+})}/>
+          <p className="text-sm text-red-600 mt-2">{errors.descripcion?.message}</p>
         </div>
 
         {/* Campo: Categoría */}
         <div>
           <label>Categoría</label>
-          <select name="categoria"   className="w-full border border-slate-300 dark:border-slate-600 rounded p-2 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500/80">
+          <select name="categoria"   className="w-full border border-slate-300 dark:border-slate-600 rounded p-2 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500/80" {...register('categoria', {
+            required: 'Debes seleccionar una categoria'
+          })}>
             <option value="">Seleccione una categoría</option>
             <option value="aventura">Aventura</option>
             <option value="comedia">Comedia</option>
             <option value="romance">Romance</option>
             <option value="terror">Terror</option>
           </select>
-          <p className="text-sm text-red-600 mt-2">ocurrio un error</p>
+          <p className="text-sm text-red-600 mt-2">{errors.categoria?.message}</p>
         </div>
 
         {/* Botón */}
