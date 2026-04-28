@@ -1,18 +1,83 @@
-# React + Vite
+# 🎬 Movies CRD
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para la gestión de películas desarrollada con React. Permite agregar, visualizar y administrar un catálogo personal de películas de forma dinámica.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tecnologías utilizadas
 
-## React Compiler
+* React
+* JavaScript (ES6+)
+* Tailwind CSS
+* React Hook Form
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+* 📌 Alta de películas mediante formulario
+* 📌 Validación de datos en tiempo real
+* 📌 Renderizado dinámico de películas en tarjetas
+* 📌 Gestión de estado con hooks (`useState`)
+* 📌 Generación de IDs únicos para cada película
+* 📌 Interfaz responsive
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📂 Estructura del proyecto
+
+```
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── FormMovie.jsx
+│   ├── GridMovie.jsx
+│   └── CardMovie.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## ⚙️ Instalación y ejecución
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/movies-crd.git
+```
+
+2. Instalar dependencias:
+
+```bash
+npm install
+```
+
+3. Ejecutar el proyecto:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🧠 Aprendizajes
+
+Durante el desarrollo de este proyecto se aplicaron conceptos clave como:
+
+* Manejo de estado en React
+* Componentización
+* Validación de formularios
+* Renderizado condicional y listas
+* Buenas prácticas de estructura de proyectos
+
+---
+
+## 👩‍💻 Autor
+
+Desarrollado por Fátima Alfaro
+💼 En búsqueda de oportunidades como desarrolladora trainee/junior
